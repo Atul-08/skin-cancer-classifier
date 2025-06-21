@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block title %}Skin Cancer Classifier{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Skin Cancer Classifier</h1>
+  <p>Upload an image of a skin lesion to detect whether it is benign or malignant.</p>
+
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="img" accept="image/*" required>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if predictions %}
+    <div class="result">
+      <h3>Prediction:</h3>
+      <p><strong>{{ predictions[0] }}</strong> ({{ predictions[1] }}% confidence)</p>
+      <img src="{{ img_path }}" class="uploaded-image" alt="Uploaded Image">
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

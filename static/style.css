@@ -1,0 +1,149 @@
+body {
+    
+    margin: 0; 
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F4F6F7;
+    color: #1C2833;
+   
+
+}
+
+
+.navbar {             /* Remove margin */
+    /* padding: 12px 24px;     Keep padding for spacing */
+    background-color: #21618C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a,
+.nav-links button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+.dark-theme {
+    background-color: #1C2833;
+    color: #ECF0F1;
+}
+
+.dark-theme .navbar {
+    background-color: #117A65;
+}
+
+.dark-theme .container {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+}
+.dark-theme body{
+    background-color: #25363e;
+}
+
+/* Main content container with rounded border */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-height: calc(100vh - 60px);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fdfefe;
+    border: 2px solid #d5dbdb;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Uploaded image styling */
+.uploaded-image {
+    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #d1d9e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #117A65;
+}
+
+/* File input styling */
+input[type="file"] {
+    background-color: #f8f9fa;
+    padding: 10px 14px;
+    border: 2px solid #d1d9e6;
+    border-radius: 6px;
+    color: #2c3e50;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #5dade2;
+    background-color: #eaf3fb;
+}
+
+/* Predict button styling */
+button[type="submit"] {
+    margin-top: 16px;
+    background-color: #117A65;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0e6655;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
